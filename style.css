@@ -1,0 +1,178 @@
+/* Lexend Deca - wgh: 400 */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+/* Big Shoulders Display - wgh: 700  */
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,700&display=swap");
+
+
+
+
+:root {
+  /* primary colors  */
+  --Gold-500: hsl(31, 77%, 52%);
+  --Cyan-800: hsl(184, 100%, 22%);
+  --Green-950: hsl(179, 100%, 13%);
+
+  /* Neutral colors  */
+
+  --Transparent-white-para: hsla(0, 0%, 100%, 0.75);
+  --Gray-100-bg-btn-headings: hsl(0, 0%, 95%);
+  --shadow-color: hsla(0, 0%, 20%, 0.4);
+
+  /* font sizes  */
+
+  --fs-large: 2.5rem;
+  --fs-mid: 1.2rem;
+  --fs-base: 1rem;
+  --fs-small: 0.85rem;
+
+  --ff-400: "Lexend Deca", sans-serif;
+  --ff-700: "Big Shoulders", sans-serif;
+}
+
+/* Global reset  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-400);
+  display: grid;
+  place-items: center;
+}
+
+.main-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-container {
+  width: min(90%, 24.375rem);
+  margin-block: 3rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+    padding: 3rem;
+}
+
+.card--sedans {
+    background-color: var(--Gold-500);
+    border-radius: 0.6rem 0.6rem 0 0;
+}
+
+.card--suvs {
+    background-color: var(--Cyan-800);
+}
+
+.card--luxury {
+    background-color: var(--Green-950);
+    border-radius: 0 0 0.6rem 0.6rem ;
+}
+
+.icon {
+    width: 60px;
+}
+
+.card__header {
+    font-size: clamp(var(--fs-large), 5vw, 3rem);
+    font-family: var(--ff-700);
+    text-transform: uppercase;
+    color: var(--Gray-100-bg-btn-headings);
+    margin-top: 0.8rem;
+}
+
+.card__description {
+    color: var(--Transparent-white-para);
+    font-size: var(--fs-base);
+    font-size: clamp(var(--fs-base), 5vw, 1.15rem);
+    line-height: 1.6;
+}
+
+.btn {
+    width: 10rem;
+    padding: 1.1rem;
+    border-radius: 1.8rem;
+    border: none;
+    background-color: var(--Gray-100-bg-btn-headings);
+    font-size: clamp(var(--fs-base), 5vw, 1.15rem);
+    font-weight: 600;
+    margin-top: 2rem;
+ }
+
+.btn--sedans {
+    color: var(--Gold-500);
+}
+.btn--suvs {
+    color: var(--Cyan-800);
+}
+.btn--luxury {
+    color: var(--Green-950);
+}
+
+@media (min-width: 50rem) {
+
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    margin-block: 0;
+    width: 65rem;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 20px var(--shadow-color);
+  }
+
+  .card--sedans {
+    border-radius: 0.6rem 0 0 0.6rem;
+  }
+
+  .card--luxury {
+    border-radius: 0 0.6rem 0.6rem 0;
+  }
+
+  .btn:hover {
+     outline: 2px solid var(--Gray-100-bg-btn-headings);
+     color: var(--Gray-100-bg-btn-headings);
+  }
+
+  .btn--sedans:hover {
+    background-color: var(--Gold-500);
+  }
+
+  .btn--suvs:hover {
+     background-color: var(--Cyan-800);
+     
+  }
+
+  .btn--luxury:hover {
+     background-color: var(--Green-950);
+  }
+
+}
+.attribution {
+  font-size: var(--fs-base);
+  color: #333;
+}
+.attribution a {
+  color: var(--Gold-500);
+}
