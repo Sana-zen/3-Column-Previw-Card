@@ -32,8 +32,8 @@ Users should be able to:
 
 ### 🔗Links
 
-- Link of Solution:  [Solution URL](https://your-solution-url.com)
-- Link of live site: [Live site URL](https://your-live-site-url.com)
+- Link of Solution:  [Solution URL](https://www.frontendmentor.io/solutions/tridrive-car-category-cards-_Qi4MjYscG)
+- Link of live site: [Live site URL](https://sana-zen.github.io/3-Column-Previw-Card/)
 
 ## ✨My process
 
